@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#144245;
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #3f9ba1;
+        }
+        h2 {
+            text-align: center;
+            color: #E7717D;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #188f96;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3f9ba1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #144245;
+        }
+      label {
+    color: #E7717D;
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>This is a prediction model to Check if a Person is Diabetic or Not !!</h2>
+        <h1>Enter Patient Data</h1>
+
+        <form method="post" action="\predict">
+            <label for="preg" >Enter No of Pregnancies:</label>
+            <input type="number" name="preg" id="preg" required><br>
+            <label for="plas">Enter Glucose level:</label>
+            <input type="number" name="plas" id="plas" required><br>
+            <label for="press">Enter BloodPressure:</label>
+            <input type="number" name="press" id="press" required><br>
+            <label for="skin">Enter SkinThickness:</label>
+            <input type="number" name="skin" id="skin" required><br>
+            <label for="test">Enter Insulin Level:</label>
+            <input type="number" name="test" id="test" required><br>
+            <label for="mass">Enter Body Mass Index (BMI):</label>
+            <input type="number" name="mass" id="mass" step="any" required ><br>
+            <label for="pedi">Enter DiabetesPedigreeFunction:</label>
+            <input type="number" name="pedi" id="pedi" step="any" required><br>
+            <label for="age">Enter Age:</label>
+            <input type="number" name="age" id="age" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
